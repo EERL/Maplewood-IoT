@@ -1,2 +1,2 @@
-# Maplewood-IoT
-Feather/Catena code for Maplewood Electric Meter IoT
+# iotHardware
+All of the code for the smart meter, raspberry pi, and LoRa board connection.
