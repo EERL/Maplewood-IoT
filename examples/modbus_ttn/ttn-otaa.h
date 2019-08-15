@@ -161,7 +161,7 @@ void onEvent (ev_t ev) {
             // Disable link check validation (automatically enabled
             // during join, but because slow data rates change max TX
       // size, we don't use it in this example.
-            LMIC_setLinkCheckMode(0);
+            LMIC_setLinkCheckMode(1);
             LMIC_setDrTxpow(DR_SF7,14);
             LMIC_selectSubBand(1);
             break;
@@ -259,7 +259,7 @@ void ttn_otaa_init(){
     // Reset the MAC state. Session and pending data transfers will be discarded.
     LMIC_reset();
 
-    LMIC_setLinkCheckMode(0);
+    LMIC_setLinkCheckMode(1);
     LMIC_setDrTxpow(DR_SF7,14);
     LMIC_selectSubBand(1);
     mydata = new uint8_t[1];

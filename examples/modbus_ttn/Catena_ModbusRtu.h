@@ -9,7 +9,7 @@
 
 #pragma once
 
-#include <Catena_PollableInterface.h> //in Catena_for_arduino library
+// #include <Catena_PollableInterface.h> //in Catena_for_arduino library
 #include <ModbusRtu.h>
 #undef min
 #undef max
@@ -17,8 +17,7 @@
 
 namespace McciCatena {
 
-class cCatenaModbusRtu : public Modbus, 
-			 public cPollableObject
+class cCatenaModbusRtu : public Modbus
 	{
 	using Super = Modbus;
 private:
@@ -247,9 +246,4 @@ void cCatenaModbusRtu::print_container(){
 	
 }
   
-// remember to register this with catena framework at startup, e.g.:
-//	gCatena.registerObject(&myCatenaModbusRtu);
-//
-//	After that, gCatena.poll() will include the object in the poll sequence.
-//
 }; // end namespace McciCatea
